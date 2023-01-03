@@ -4,7 +4,7 @@ import { Edit, SimpleForm, TextInput, DateInput, ReferenceManyField, Datagrid, T
 import RichTextInput from 'ra-input-rich-text';
 
 export const PostEdit = () => (
-  <Edit>
+  <Edit mutationMode="pessimistic">
     <SimpleForm>
       <TextInput disabled label="Id" source="id" />
       <TextInput source="title" validate={required()} />
